@@ -1,7 +1,19 @@
+
 import React from 'react';
-import ReactDom from 'react-dom';
+import { render } from 'react-dom';
+import MediaList from './components/medialist/medialist.js';
+import Faker from 'faker';
+const dataList = [];
 
-const main = document.getElementById('main');
-const holaMundo = <h1>Hola mundo!</h1>; 
+             
+for(let i = 0; i < 10; i++) { 
+    dataList.push({
+        image: Faker.image.animals(260,160),
+        title: Faker.lorem.words(5) ,
+        description: Faker.lorem.words(20) 
+    })
+} 
 
-ReactDom.render(holaMundo, main);
+const main = document.getElementById('main'); 
+
+render(<MediaList dataList={dataList} />, main);

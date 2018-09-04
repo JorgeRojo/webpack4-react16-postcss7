@@ -1,0 +1,25 @@
+.container {  
+    cursor: pointer;
+    margin-right: 15px;
+    display: inline-block;
+    width: 260px;
+    padding: 10px;
+    background-color: aquamarine;
+    vertical-align: top;
+
+}
+
+.wrapper {
+    & h3, & p {
+        padding: 0 10px;
+        margin: 5px 0;
+    }  
+}
+
+.title {
+    color: Red;
+}
+
+.description {
+    color: Blue;
+}

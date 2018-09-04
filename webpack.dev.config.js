@@ -5,7 +5,7 @@ module.exports = {
     entry: path.resolve(__dirname, 'src/js/main.js'), 
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'js/bundle.js'
     },
     devServer: {
         port: 9000,
@@ -42,9 +42,12 @@ module.exports = {
                         sourceMap: true,
                         presets: [
                             '@babel/preset-env',
-                            '@babel/preset-react'
+                            '@babel/preset-react', 
                         ],
-                        plugins: ['@babel/plugin-transform-runtime']
+                        plugins: [
+                            '@babel/plugin-transform-runtime',
+                            '@babel/plugin-proposal-class-properties'
+                        ]
                     }
                 }
             },
