@@ -1,0 +1,23 @@
+.btn {
+    color: #000; 
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    &.delete {
+        font-size: 0.8em; 
+        color: color(cadetblue blackness(60%));
+    }
+    &.add {
+        color: color(cadetblue blackness(50%));
+        font-size: 16px;
+        line-height: 1em;
+        font-weight: bold;
+    }
+}
+
+
+
+
+ 

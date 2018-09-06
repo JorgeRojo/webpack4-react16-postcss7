@@ -39,7 +39,6 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: { 
-                        sourceMap: true,
                         presets: [
                             '@babel/preset-env',
                             '@babel/preset-react', 
@@ -47,7 +46,8 @@ module.exports = {
                         plugins: [
                             '@babel/plugin-transform-runtime',
                             '@babel/plugin-proposal-class-properties'
-                        ]
+                        ],
+                        sourceMap: true,
                     }
                 }
             },
@@ -55,22 +55,35 @@ module.exports = {
                 test: /\.scss$/, 
                 use: [  
                     { 
-                        loader: 'style-loader'   
+                        loader: 'style-loader' , 
+                        options: {
+                            sourceMap: true,
+                        } 
                     },
                     { 
                         loader: 'css-loader',
                         options: {
-                            sourceMap: true,
                             modules: true,
                             importLoaders: true,
+                            sourceMap: true,
                         }
-                    }, 
+                    },
+                    { 
+                        loader: 'sass-loader',
+                        options: { 
+                            sourceMap: true,
+                        }
+                    },
                     { 
                         loader: 'postcss-loader',
                         options: {
-                            sourceMap: true
+                            plugins: (loader) => [ 
+                                //require('cssnano')({preset: 'default'}),
+                                //require('postcss-nested')(),
+                            ],
+                            sourceMap: true,
                         }
-                    },
+                    } 
                 ]
             } 
         ]

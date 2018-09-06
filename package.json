@@ -20,11 +20,13 @@
     "@babel/runtime": "^7.0.0",
     "babel-loader": "^8.0.0",
     "css-loader": "^1.0.0",
+    "cssnano": "^4.1.0",
     "file-loader": "^2.0.0",
     "path": "^0.12.7",
     "postcss": "^7.0.2",
     "postcss-cssnext": "^3.1.0",
     "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
@@ -32,8 +34,11 @@
   },
   "dependencies": {
     "faker": "^4.1.0",
+    "node-sass": "^4.9.3",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react-css-modules": "^4.7.7",
+    "react-dom": "^16.4.2",
+    "uniqid": "^5.0.3"
   }
 }
