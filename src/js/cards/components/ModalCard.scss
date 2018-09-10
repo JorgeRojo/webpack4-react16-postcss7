@@ -1,0 +1,28 @@
+.wrapper {
+    overflow: hidden;  
+    padding: 10px 10px 30px;
+    background-color: rgba(#000, 0.05); 
+     
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto 10px;
+        display: block;
+    }
+
+    p {
+        margin: 0 0 10px 0;
+    } 
+
+    :global(.buttonDelete) { 
+        right: 30px;
+        bottom: 30px; 
+    }
+
+    :global(.buttonEdit) { 
+        left: 30px;
+        bottom: 30px; 
+    }
+
+
+}

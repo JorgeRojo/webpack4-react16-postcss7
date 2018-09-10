@@ -1,16 +1,23 @@
 const path = require('path'); 
+const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
-    entry: path.resolve(__dirname, 'src/js/main.js'), 
+    entry: ["@babel/polyfill", path.resolve(__dirname, 'src/js/main.js')], 
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/bundle.js'
+        filename: 'js/bundle.js',
+        sourceMapFilename: "[file].map?[contenthash]"
     },
     devServer: {
         port: 9000,
         contentBase: './' ,  
+        hot: true,
     },
+    plugins: [  
+        new webpack.HotModuleReplacementPlugin()
+    ],
+    devtool: 'inline-source-map',
     module: {
         rules: [  
             { //fonts
@@ -38,22 +45,14 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: 'babel-loader',
-                    options: { 
-                        presets: [
-                            '@babel/preset-env',
-                            '@babel/preset-react', 
-                        ],
-                        plugins: [
-                            '@babel/plugin-transform-runtime',
-                            '@babel/plugin-proposal-class-properties'
-                        ],
+                    options: {  
                         sourceMap: true,
                     }
                 }
             },
             { // scss
                 test: /\.scss$/, 
-                use: [  
+                use: [     
                     { 
                         loader: 'style-loader' , 
                         options: {
@@ -65,7 +64,9 @@ module.exports = {
                         options: {
                             modules: true,
                             importLoaders: true,
-                            sourceMap: true,
+                            sourceMap: true, 
+                            //localIdentName: '[local]--[hash:base64:5]',
+                            localIdentName: '[name]-[local]-[hash:base64:5]',
                         }
                     },
                     { 
@@ -76,7 +77,7 @@ module.exports = {
                     },
                     { 
                         loader: 'postcss-loader',
-                        options: {
+                        options: { 
                             plugins: (loader) => [ 
                                 //require('cssnano')({preset: 'default'}),
                                 //require('postcss-nested')(),

@@ -1,0 +1,69 @@
+.wrapper { 
+    .imageContainer {
+        float: left;
+        width: 110px;
+        height: 110px;
+        background-color: #ccc;
+        margin-right: 10px;
+        border: solid 1px #999;
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .fieldsGroup {
+        overflow: hidden;
+    }
+
+    .fieldContainer {
+        overflow: hidden;
+        padding-bottom: 10px;
+
+      
+        input[type=text], 
+        select {
+            box-sizing: border-box;
+            width: 100%;
+            border:none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            height: 30px;
+            line-height: 30px;
+            background-color: rgba(255, 255, 255, 0.657);
+            &:focus { 
+                outline: transparent;
+            }
+        }
+
+        .error {
+            color: Red;
+            margin: 0;
+            font-size: 12px;
+        }
+    }
+
+    button {
+        margin: 5px auto ;
+        display: block;
+        border: none;
+        height: 40px;
+        line-height: 40px;
+        box-sizing: border-box;
+        padding: 0 10px; 
+        min-width: 150px;
+        border-radius: 15px;
+        background-color: #fff;
+        color: #000;       
+        font-size: 18px;
+        position: relative;
+        &:focus, 
+        &:active { 
+            outline: transparent;
+        }
+         
+        &:active { 
+            top: 1px;
+        }
+    }
+}

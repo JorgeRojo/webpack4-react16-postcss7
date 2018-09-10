@@ -1,9 +1,8 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-import PlayList from './components/PlayList.js'; 
-import css from '../scss/main.scss';
- 
-const main = document.getElementById('main'); 
+import PanelLayout from './layouts/components/PanelLayout'; 
+import './main.scss';   
 
-render(<PlayList/>, main);
+
+render(<PanelLayout/>, document.getElementById('main'));
