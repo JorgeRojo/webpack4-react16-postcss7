@@ -46,8 +46,8 @@ $delay: 300ms;
         padding: 20px;
         background-color: paleturquoise;
         position: relative;
-        max-width: 500px;
         width: 100%;
+        max-width: 500px;
         box-sizing: border-box;
         margin: auto; 
         border-radius: 5px;
@@ -76,5 +76,6 @@ $delay: 300ms;
     .contents { 
         overflow: hidden; 
         margin-top: 10px; 
+        width: 100%;
     } 
 }

@@ -43,7 +43,7 @@ class PanelLayout extends Component {
         dataList.push({
             id: uniqid(), 
             title: Faker.lorem.words(this._randBetween(3, 9)),
-            description: Faker.lorem.words(this._randBetween(10,20)),
+            description: Faker.lorem.words(this._randBetween(10,20)) + " " + this._randBetween(0,20).toString().padStart(3,'0'),
             image: this.images[this._randBetween(0,this.images.length -1)]
         })
 
