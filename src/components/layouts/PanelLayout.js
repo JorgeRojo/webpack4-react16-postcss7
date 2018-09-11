@@ -12,7 +12,7 @@ import Modal from  '../modals/Modal';
 import CardFormContainer from  '../forms/CardFormContainer';
  
 const images = [
-    require('../../images/cabritillo.jpg'),  
+    require('../../images/corderito.jpg'),  
     require('../../images/acaro.jpg'),  
     require('../../images/buhito.jpg'),  
     require('../../images/conejito.jpg'),  
@@ -197,13 +197,12 @@ class PanelLayout extends Component {
                     handleEditCard={this.handleOpenModalFormEditCard}
                     handleOpenModal={this.handleOpenModalCard}  
                 />    
- 
-                <Modal 
-                    isActive={this.state.modalVisible}  
+
+                <Modal isActive={this.state.modalVisible}  
                     title={this.state.modalTitle}  
                     handleClickClose={this.handleCloseModal} 
-                > { this.state.modalContent } </Modal> 
-                  
+                > { this.state.modalContent } </Modal>   
+
                 <ButtonAdd handleClick={ this.handleClickAddNew } />
                 <ButtonOpen handleClick={ this.handleOpenModalForm } /> 
 

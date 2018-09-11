@@ -17,7 +17,7 @@ module.exports = {
     plugins: [  
         new webpack.HotModuleReplacementPlugin()
     ],
-    devtool: 'inline-source-map',
+    devtool: 'eval-source-map',
     module: {
         rules: [  
             { //fonts
