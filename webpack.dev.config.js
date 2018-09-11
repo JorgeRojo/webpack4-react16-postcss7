@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
-    entry: ["@babel/polyfill", path.resolve(__dirname, 'src/js/main.js')], 
+    entry: ["@babel/polyfill", path.resolve(__dirname, 'src/components/main.js')], 
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/bundle.js',
@@ -53,38 +53,18 @@ module.exports = {
             { // scss
                 test: /\.scss$/, 
                 use: [     
-                    { 
-                        loader: 'style-loader' , 
-                        options: {
-                            sourceMap: true,
-                        } 
-                    },
+                    { loader: 'style-loader', options: { sourceMap: true } },
                     { 
                         loader: 'css-loader',
                         options: {
                             modules: true,
                             importLoaders: true,
-                            sourceMap: true, 
-                            //localIdentName: '[local]--[hash:base64:5]',
+                            sourceMap: true,  
                             localIdentName: '[name]-[local]-[hash:base64:5]',
                         }
                     },
-                    { 
-                        loader: 'sass-loader',
-                        options: { 
-                            sourceMap: true,
-                        }
-                    },
-                    { 
-                        loader: 'postcss-loader',
-                        options: { 
-                            plugins: (loader) => [ 
-                                //require('cssnano')({preset: 'default'}),
-                                //require('postcss-nested')(),
-                            ],
-                            sourceMap: true,
-                        }
-                    } 
+                    { loader: 'sass-loader', options: { sourceMap: true } },
+                    { loader: 'postcss-loader', options: { sourceMap: true } } 
                 ]
             } 
         ]

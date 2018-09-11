@@ -4,24 +4,24 @@ import { hot } from 'react-hot-loader';
 import Faker from 'faker';
 import uniqid from 'uniqid';  
 
-import CardList from  '../../cards/components/CardList';  
-import ModalCard from '../../cards/components/ModalCard';
-import ButtonAdd from '../../buttons/components/ButtonAdd';
-import ButtonOpen from '../../buttons/components/ButtonOpen';
-import Modal from  '../../modals/components/Modal';
-import CardFormContainer from  '../../forms/components/CardFormContainer';
+import CardList from  '../cards/CardList';  
+import ModalCard from '../cards/ModalCard';
+import ButtonAdd from '../buttons/ButtonAdd';
+import ButtonOpen from '../buttons/ButtonOpen';
+import Modal from  '../modals/Modal';
+import CardFormContainer from  '../forms/CardFormContainer';
  
 const images = [
-    require('../../../images/cabritillo.jpg'),  
-    require('../../../images/acaro.jpg'),  
-    require('../../../images/buhito.jpg'),  
-    require('../../../images/conejito.jpg'),  
-    require('../../../images/erizito.jpg'),  
-    require('../../../images/gatito.jpg'),  
-    require('../../../images/panda.jpg'),  
-    require('../../../images/perrito.jpg'),  
-    require('../../../images/pollito.jpg'),  
-    require('../../../images/tigre.jpg'),  
+    require('../../images/cabritillo.jpg'),  
+    require('../../images/acaro.jpg'),  
+    require('../../images/buhito.jpg'),  
+    require('../../images/conejito.jpg'),  
+    require('../../images/erizito.jpg'),  
+    require('../../images/gatito.jpg'),  
+    require('../../images/panda.jpg'),  
+    require('../../images/perrito.jpg'),  
+    require('../../images/pollito.jpg'),  
+    require('../../images/tigre.jpg'),  
 ] 
 
 class PanelLayout extends Component {  
@@ -85,9 +85,9 @@ class PanelLayout extends Component {
             modalTitle: formData ? "Edit card" : "Create new card",
             modalContent: (
                 <CardFormContainer 
-                    formData={formData}
                     images={this.images}
-                    saveCard={this.saveByFormData}  
+                    formData={formData}
+                    sendData={this.saveByFormData}  
                 />
             ),
         })  

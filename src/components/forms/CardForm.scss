@@ -1,15 +1,20 @@
 .wrapper { 
+
+    background-color: rgba(#000, 0.1);
+    border: solid 1px rgba(#000, 0.2);
+    padding: 10px;
+
     .imageContainer {
         float: left;
         width: 110px;
-        height: 110px;
-        background-color: #ccc;
-        margin-right: 10px;
-        border: solid 1px #999;
+        height: 110px; 
+        margin-right: 10px; 
         box-sizing: border-box;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        background-color: rgba(#000, 0.1);
+        border: solid 1px rgba(#000, 0.2);
     }
 
     .fieldsGroup {
@@ -31,12 +36,15 @@
             height: 30px;
             line-height: 30px;
             background-color: rgba(255, 255, 255, 0.657);
+            &.error{
+                box-shadow: inset  0 0 1px 1px  Red; 
+            }
             &:focus { 
                 outline: transparent;
             }
         }
 
-        .error {
+        p.error {
             color: Red;
             margin: 0;
             font-size: 12px;
