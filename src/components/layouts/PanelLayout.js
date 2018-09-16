@@ -4,24 +4,24 @@ import { hot } from 'react-hot-loader';
 import Faker from 'faker';
 import uniqid from 'uniqid';  
 
-import CardList from  '../cards/CardList';  
-import ModalCard from '../cards/ModalCard';
-import ButtonAdd from '../buttons/ButtonAdd';
-import ButtonOpen from '../buttons/ButtonOpen';
-import Modal from  '../modals/Modal';
-import CardFormContainer from  '../forms/CardFormContainer';
+import CardList from  './src/components/cards/CardList';  
+import ModalCard from './src/components/cards/ModalCard';
+import ButtonAdd from './src/components/buttons/ButtonAdd';
+import ButtonOpen from './src/components/buttons/ButtonOpen';
+import Modal from  './src/components/modals/Modal';
+import CardFormContainer from  './src/components/forms/CardFormContainer';
  
 const images = [
-    require('../../images/corderito.jpg'),  
-    require('../../images/acaro.jpg'),  
-    require('../../images/buhito.jpg'),  
-    require('../../images/conejito.jpg'),  
-    require('../../images/erizito.jpg'),  
-    require('../../images/gatito.jpg'),  
-    require('../../images/panda.jpg'),  
-    require('../../images/perrito.jpg'),  
-    require('../../images/pollito.jpg'),  
-    require('../../images/tigre.jpg'),  
+    require('./src/assets/images/corderito.jpg'),  
+    require('./src/assets/images/acaro.jpg'),  
+    require('./src/assets/images/buhito.jpg'),  
+    require('./src/assets/images/conejito.jpg'),  
+    require('./src/assets/images/erizito.jpg'),  
+    require('./src/assets/images/gatito.jpg'),  
+    require('./src/assets/images/panda.jpg'),  
+    require('./src/assets/images/perrito.jpg'),  
+    require('./src/assets/images/pollito.jpg'),  
+    require('./src/assets/images/tigre.jpg'),  
 ] 
 
 class PanelLayout extends Component {  

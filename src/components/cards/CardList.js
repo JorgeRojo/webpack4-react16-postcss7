@@ -1,7 +1,8 @@
 import React from 'react';  
-import CSSModules from 'react-css-modules'; 
-import Card from  './Card'; 
+import CSSModules from 'react-css-modules';  
 import styles from './CardList.scss';  
+
+import Card from  './src/components/cards/Card';
 
 const CardList = props => (
     <div styleName="wrapper">  

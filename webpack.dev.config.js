@@ -3,15 +3,23 @@ const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
-    entry: ["@babel/polyfill", path.resolve(__dirname, 'src/components/main.js')], 
+    resolve: {
+        alias: {
+            './src': path.resolve(__dirname, 'src')
+        }  
+    },    
+    entry: {
+        "home": ["@babel/polyfill", path.resolve(__dirname, 'src/entries/home.js')],
+        "redux": ["@babel/polyfill", path.resolve(__dirname, 'src/entries/redux.js')],
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/bundle.js',
+        filename: 'js/[name].js',
         sourceMapFilename: "[file].map?[contenthash]"
     },
     devServer: {
         port: 9000,
-        contentBase: './' ,  
+        contentBase: './web/' ,  
         hot: true,
     },
     plugins: [  
