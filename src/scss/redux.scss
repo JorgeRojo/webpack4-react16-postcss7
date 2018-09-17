@@ -1,0 +1,23 @@
+ 
+:global(#form) { 
+    display: block;
+    padding: 50px;
+    > input {
+        width: 100%;  
+        padding: 10px;
+        box-sizing: border-box;
+        border: none;
+    }
+}
+
+:global(#playlist) {
+    margin: 0 50px;
+    color: black;
+    list-style: none;
+    > li {
+        background: black;
+        color: aliceblue;        
+        margin-bottom: 10px;
+        padding: 5px 10px;
+    }
+}
