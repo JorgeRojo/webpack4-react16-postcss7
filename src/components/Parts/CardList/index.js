@@ -2,9 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import CSSModules from 'react-css-modules';  
 
-import styles from './CardList.scss';  
+import styles from './styles.scss';  
 
-import Card from  '~/components/cards/Card';
+import Card from  '~/components/Parts/Card';
 
 const CardList = props => (
     <div styleName="wrapper">  

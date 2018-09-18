@@ -1,7 +1,7 @@
 import React from 'react'; 
 import Button from './Button';   
 
-function buttonEdit(props) { 
+function ButtonEdit(props) { 
     return (
         <Button className="buttonEdit" {...props}>
             EDIT 
@@ -9,4 +9,4 @@ function buttonEdit(props) {
     );
 }
   
-export default buttonEdit;
+export default ButtonEdit;

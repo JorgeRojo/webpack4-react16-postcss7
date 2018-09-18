@@ -1,17 +1,14 @@
 import React, { Component } from 'react';  
-import { connect } from 'react-redux';  
-import { hot } from 'react-hot-loader'; 
+import { connect } from 'react-redux';   
  
- 
-import CardList from  '~/components/cards/CardList';   
-import ButtonAdd from '~/components/buttons/ButtonAdd';
-import ButtonOpen from '~/components/buttons/ButtonOpen';
-import Modal from  '~/components/modals/Modal';
-import FormCardsContainer from  '~/components/forms/FormCardsContainer';
+import CardList from  '~/components/Parts/CardList';   
+import ButtonAdd from '~/components/Buttons/ButtonAdd';
+import ButtonOpen from '~/components/Buttons/ButtonOpen';
+import Modal from  '~/components/Parts/Modal';
+import FormCardsContainer from  '~/containers/FormCardsContainer';
   
-class PanelLayout extends Component {  
- 
-         
+class HomeLayout extends Component {  
+  
     handleClickAddRandCard = event => { 
         event.preventDefault();   
         this.props.dispatch({
@@ -44,15 +41,15 @@ class PanelLayout extends Component {
 
     render() {    
         return (
-            <div>     
+            <>     
                 <CardList />   
                 <Modal {...this.props.modal} />
                 <ButtonAdd handleClick={ this.handleClickAddRandCard } />
                 <ButtonOpen handleClick={ this.handleClickOpenModalForm } /> 
-            </div> 
+            </> 
         )
-    } 
- 
+    }  
+
 }
 
   
@@ -62,6 +59,4 @@ function mapStateToProps(state, props) {
     }
 } 
 
-export default  module.hot 
-    ? hot(module)(connect(mapStateToProps)(PanelLayout)) 
-    : connect(mapStateToProps)(PanelLayout)
+export default connect(mapStateToProps)(HomeLayout) 

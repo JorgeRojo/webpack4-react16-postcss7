@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {images} from '~/utils/utils'
 
 import CSSModules from 'react-css-modules'
-import styles from './FormCards.scss'
+import styles from './styles.scss'
 
  
 const FormCards = props => {

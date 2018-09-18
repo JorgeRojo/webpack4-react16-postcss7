@@ -5,6 +5,8 @@ import { render } from 'react-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import reducers  from '~/reducers'; 
+import '~/scss/main.scss';    
+import HomeApp from '~/containers/HomeApp';   
  
 //data -------------------- 
 const initilState = (() => { 
@@ -40,12 +42,10 @@ const store = createStore(
 
 //view --------------------
 
-import '~/scss/main.scss';    
-import PanelLayout from '~/components/layouts/PanelLayout';   
 
 
 render(
 <Provider store={store} >
-    <PanelLayout/>
+    <HomeApp/>
 </Provider> 
 , document.getElementById('main'));

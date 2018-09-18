@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
 
-import FormCards from './FormCards'; 
+import FormCards from '~/components/Forms/FormCards'; 
 
 class FormCardsContainer extends PureComponent { 
    
@@ -119,4 +119,5 @@ class FormCardsContainer extends PureComponent {
 function mapStateToProps(state, props) {
     return { ...state.components.form_cards }
 } 
+
 export default connect(mapStateToProps)(FormCardsContainer);

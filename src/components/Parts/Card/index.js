@@ -2,12 +2,12 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';  
 import CSSModules from 'react-css-modules'; 
-import styles from './Card.scss';  
+import styles from './styles.scss';  
 
-import ButtonDelete from '~/components/buttons/ButtonDelete';
-import ButtonEdit from '~/components/buttons/ButtonEdit';
-import ModalCard from  '~/components/cards/ModalCard';   
-import FormCardsContainer from '~/components/forms/FormCardsContainer';
+import ButtonDelete from '~/components/Buttons/ButtonDelete';
+import ButtonEdit from '~/components/Buttons/ButtonEdit';
+import ModalCard from  '~/components/Parts/ModalCard';   
+import FormCardsContainer from '~/containers/FormCardsContainer';
 
 class Card extends PureComponent { 
 

@@ -3,8 +3,8 @@ import CSSModules from 'react-css-modules';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
-import ModalPortal from  './ModalPortal';
-import styles from  './Modal.scss';
+import ModalPortal from  '~/containers/ModalPortal'// ~/containers/ModalPortal.js';
+import styles from  './styles.scss';
 
 class Modal extends PureComponent {
    

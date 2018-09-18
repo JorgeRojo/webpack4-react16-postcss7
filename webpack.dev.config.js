@@ -1,5 +1,6 @@
 const path = require('path'); 
 const webpack = require('webpack');
+const cssModulesClassNaming = require('./scripts/cssModulesClassNaming')();
 
 module.exports = {
     mode: 'development',
@@ -21,6 +22,7 @@ module.exports = {
         port: 9000,
         contentBase: './web/' ,  
         hot: true,
+        open: 'chrome',
     },
     plugins: [  
         new webpack.HotModuleReplacementPlugin()
@@ -67,8 +69,9 @@ module.exports = {
                         options: {
                             modules: true,
                             importLoaders: true,
-                            sourceMap: true,  
-                            localIdentName: '[name]-[local]-[hash:base64:5]',
+                            sourceMap: true,   
+                            localIdentName: cssModulesClassNaming.localIdentName, 
+                            getLocalIdent: cssModulesClassNaming.getLocalIdent
                         }
                     },
                     { loader: 'sass-loader', options: { sourceMap: true } },
