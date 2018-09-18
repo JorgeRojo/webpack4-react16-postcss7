@@ -1,5 +1,5 @@
 
-import {getRandCard} from './src/utils/utils'; 
+import {getRandCard} from '~/utils/utils'; 
 import uniqid from 'uniqid'; 
 
 export default function (state = [], action) {

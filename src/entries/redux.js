@@ -23,8 +23,8 @@ const store = createStore(
 
 //----------------------------------------------------------------------
 
-import './src/scss/main.scss';    
-import './src/scss/redux.scss';   
+import '~/scss/main.scss';    
+import '~/scss/redux.scss';   
  
 
 const $form = document.getElementById('form');

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import CSSModules from 'react-css-modules';
 import styles from './ModalCard.scss'; 
 
-import ButtonDelete from './src/components/buttons/ButtonDelete';
-import ButtonEdit from './src/components/buttons/ButtonEdit';
+import ButtonDelete from '~/components/buttons/ButtonDelete';
+import ButtonEdit from '~/components/buttons/ButtonEdit';
 
 const ModalCard = props => (  
     <div styleName="wrapper"> 

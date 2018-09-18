@@ -1,6 +1,6 @@
 import React  from 'react';
 import {connect} from 'react-redux';
-import {images} from './src/utils/utils'
+import {images} from '~/utils/utils'
 
 import CSSModules from 'react-css-modules'
 import styles from './FormCards.scss'

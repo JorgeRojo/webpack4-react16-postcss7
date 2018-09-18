@@ -2,16 +2,16 @@ import Faker from 'faker';
 import uniqid from 'uniqid';   
  
 const images = [
-    require('./src/assets/images/corderito.jpg'),  
-    require('./src/assets/images/acaro.jpg'),  
-    require('./src/assets/images/buhito.jpg'),  
-    require('./src/assets/images/conejito.jpg'),  
-    require('./src/assets/images/erizito.jpg'),  
-    require('./src/assets/images/gatito.jpg'),  
-    require('./src/assets/images/panda.jpg'),  
-    require('./src/assets/images/perrito.jpg'),  
-    require('./src/assets/images/pollito.jpg'),  
-    require('./src/assets/images/tigre.jpg'),  
+    require('~/assets/images/corderito.jpg'),  
+    require('~/assets/images/acaro.jpg'),  
+    require('~/assets/images/buhito.jpg'),  
+    require('~/assets/images/conejito.jpg'),  
+    require('~/assets/images/erizito.jpg'),  
+    require('~/assets/images/gatito.jpg'),  
+    require('~/assets/images/panda.jpg'),  
+    require('~/assets/images/perrito.jpg'),  
+    require('~/assets/images/pollito.jpg'),  
+    require('~/assets/images/tigre.jpg'),  
 ] 
 
 

@@ -1,6 +1,6 @@
 {  
     "path-intellisense.mappings": { 
-        "src": "${workspaceRoot}/src", 
+        "~/": "${workspaceRoot}/src", 
     },
     "git.ignoreLimitWarning": true,
 }

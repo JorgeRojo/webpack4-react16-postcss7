@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { hot } from 'react-hot-loader'; 
  
  
-import CardList from  './src/components/cards/CardList';   
-import ButtonAdd from './src/components/buttons/ButtonAdd';
-import ButtonOpen from './src/components/buttons/ButtonOpen';
-import Modal from  './src/components/modals/Modal';
-import FormCardsContainer from  './src/components/forms/FormCardsContainer';
+import CardList from  '~/components/cards/CardList';   
+import ButtonAdd from '~/components/buttons/ButtonAdd';
+import ButtonOpen from '~/components/buttons/ButtonOpen';
+import Modal from  '~/components/modals/Modal';
+import FormCardsContainer from  '~/components/forms/FormCardsContainer';
   
 class PanelLayout extends Component {  
  

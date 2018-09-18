@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import CSSModules from 'react-css-modules'; 
 import styles from './Card.scss';  
 
-import ButtonDelete from './src/components/buttons/ButtonDelete';
-import ButtonEdit from './src/components/buttons/ButtonEdit';
-import ModalCard from  './src/components/cards/ModalCard';   
-import FormCardsContainer from './src/components/forms/FormCardsContainer';
+import ButtonDelete from '~/components/buttons/ButtonDelete';
+import ButtonEdit from '~/components/buttons/ButtonEdit';
+import ModalCard from  '~/components/cards/ModalCard';   
+import FormCardsContainer from '~/components/forms/FormCardsContainer';
 
 class Card extends PureComponent { 
 

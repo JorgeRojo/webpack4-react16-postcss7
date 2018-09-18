@@ -1,10 +1,10 @@
 
-import { getRandCard }   from './src/utils/utils'  
+import { getRandCard }   from '~/utils/utils'  
 import React from 'react'
 import { render } from 'react-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import reducers  from './src/reducers'; 
+import reducers  from '~/reducers'; 
  
 //data -------------------- 
 const initilState = (() => { 
@@ -40,9 +40,8 @@ const store = createStore(
 
 //view --------------------
 
-import './src/scss/main.scss';    
-import PanelLayout from './src/components/layouts/PanelLayout';  
-import components from '../reducers/components';
+import '~/scss/main.scss';    
+import PanelLayout from '~/components/layouts/PanelLayout';   
 
 
 render(
