@@ -5,6 +5,7 @@ import CardList from  '~/components/Parts/CardList';
 import ButtonAdd from '~/components/Buttons/ButtonAdd';
 import ButtonOpen from '~/components/Buttons/ButtonOpen';
 import Modal from  '~/components/Parts/Modal';
+import ModuleTest from '~/components/foreignComponents/ModuleTest';
 import FormCardsContainer from  '~/containers/FormCardsContainer';
   
 class HomeLayout extends Component {  
@@ -43,9 +44,10 @@ class HomeLayout extends Component {
         return (
             <>     
                 <CardList />   
-                <Modal {...this.props.modal} />
                 <ButtonAdd handleClick={ this.handleClickAddRandCard } />
                 <ButtonOpen handleClick={ this.handleClickOpenModalForm } /> 
+                <ModuleTest />
+                <Modal {...this.props.modal} />
             </> 
         )
     }  
