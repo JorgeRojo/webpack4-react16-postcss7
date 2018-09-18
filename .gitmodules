@@ -1,0 +1,3 @@
+[submodule "src/components/foreignComponents"]
+	path = src/components/foreignComponents
+	url = git@github.com:JorgeRojo/foreignComponents.git
